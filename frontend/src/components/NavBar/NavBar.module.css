@@ -1,0 +1,64 @@
+/* Google Fonts Import Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.logos{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo{
+  margin: 20px;
+}
+
+.nav{
+   background-color: #000000;
+   border-bottom: 5px solid #000000;
+
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.li{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.navlinks{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 15px;
+  border-radius: 12px;
+}
+.navlinks li{
+  list-style: none;
+  margin: 0 12px;
+}
+.navlinks li a{
+  position: relative;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 6px 0;
+  text-decoration: none;
+}
+.navlinks li a:before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: #ffffff;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+}
+.navlinks li a:hover:before{
+  width: 100%;
+}
