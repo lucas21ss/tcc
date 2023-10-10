@@ -1,5 +1,5 @@
 //index.js do HOME
-import React from "react";
+import React, { useState, useEffect } from "react";
 import api from "../../utils/api";
 import estilo from "./Home.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -7,7 +7,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // className={`{estilo.card}`}
 
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+
+function Aaa(relogios){
+  relogios.map((relogio) => (
+    console.log("RELOGIO: ", relogio.RelogioImagems[0])
+  ))
+}
 
 function Home() {
   const [relogios, setRelogios] = useState([]);
@@ -17,6 +22,9 @@ function Home() {
       setRelogios(response.data.relogios);
     });
   }, []);
+
+  Aaa(relogios)
+
   return (
     <section>
       <div className="heading_container heading_center">
@@ -30,7 +38,7 @@ function Home() {
                 <div className={`${estilo.card}`}>
                   <div className={`${estilo.imgBx}`}>
                     <img
-                      src={`http://localhost:5000/public/imagem/${relogios.RelogioImagem[0]?.image}`}
+                      src={`http://localhost:5000/imagem/${relogio.RelogioImagems[0]?.image}`}
                       alt=""
                     />
                   </div>
